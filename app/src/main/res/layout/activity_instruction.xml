@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dafffb"
+    tools:context=".Instruction">
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="374dp"
+        android:layout_height="632dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.494">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:text="Overview:"
+                android:textColor="#04364a"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Paimon is the Mascot of a Popular Anime Style Open World Game Called Genshin Impact. It is a story of twin sibling calling themselves as a Traveler, Traveling on different kinds of the Universe. \n\n
+    After Travelling across Teyvat and finally decides to leave the universe, their path was blocked by the Unknown God, Capturing Both two of them and thrown away.\n\n
+    His twin sister Lumine was awakened first, and never been seen anymore. \n\n
+    After 500 Years, Aether(Lumine\'s Twin Brother) finally woken up and their powers gone, he travels the unknown horizon and do some fishing, instead of fish He capture some Unknown Creature, calling herself Paimon. \n\n
+    Paimon was Drowning and losing hope but thanks to the traveler, her life was saved. So as a Token of Appreciation, Paimon decides to be the Traveler's Best Guide Companion to help him search for her lost Sister. \n\n
+    They traveled several nations together, Fight and Struggle, on the latest chapter of the game they Already on the 5th Nation of Teyvat\'s 7 Nations meeting the nation\'s Archon to find some answers for her lost sister. \n\n
+    Paimon was Also known for her Talkative Personality, and Passion for Tasty and Yummy food that Traveler always treats her. \n\n
+    Paimon was very thankful to the Traveler for all of the good things happened, and as a token of Friendship, she decide to Build the Paimon\'s Travern so that they can eat as much as they like, and earn money in the Process."
+                android:textColor="#04364a" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:text="How to Order:"
+                android:textColor="#04364a"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/kieth"
+                android:textColor="#04364a"
+                android:textSize="15dp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/kieth2"
+                android:textColor="#04364a"
+                android:textSize="15dp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/kieth3"
+                android:textColor="#04364a"
+                android:textSize="15dp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/kieth4"
+                android:textColor="#04364a"
+                android:textSize="15dp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/kieth5"
+                android:textColor="#04364a"
+                android:textSize="15dp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/kieth6"
+                android:textColor="#04364a"
+                android:textSize="15dp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/kieth7"
+                android:textColor="#04364a"
+                android:textSize="15dp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="References:"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:textColor="#04364a"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About Genshin Impact References"
+                android:textColor="#04364a"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/share1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#176b87"
+                android:layout_marginRight="20dp"
+                android:text="Link"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About Genshin Impact Food References"
+                android:textColor="#04364a"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/share2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#176b87"
+                android:layout_marginRight="20dp"
+                android:text="Link"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Credits:"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:textColor="#04364a"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kieth Rhiecel Busano \n\nJohn Reoben Esnardo \n\nReymar Villanueva \n\n"
+                android:textColor="#04364a"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="15dp"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Switch
+        android:id="@+id/switch4"
+        android:layout_width="93dp"
+        android:layout_height="32dp"
+        android:text="Music"
+        android:textColor="#04364a"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

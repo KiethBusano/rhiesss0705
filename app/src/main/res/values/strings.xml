@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Paimon\'s Travern</string>
+    <string name="welcome">Welcome to Paimon\'s Travern. I know you have a long and exhausting Journey, but rest assure to experience being Relax here at our travern, but before anything else, What should we call you Traveler?</string>
+
+    <string name="kieth">To order, you just need to click the image you desire. The image is clickable and it will notice you that the item was added on the list.</string>
+    <string name="kieth2">There is a tons of Items to choose from feel free to explore the app.</string>
+    <string name="kieth3">After you are satisfied with your order. Click the Order Button on the Bottom of the list to Continue, notice that if you click Order Button without adding items on the list, the app will only notice you that \"You don\'t Order Anything\".</string>
+    <string name="kieth4">The Order Button will direct you to the next activity, this button will go to the next activity containing the lists of item you ordered and the price as well.</string>
+    <string name="kieth5">Click the Cancel Button if you want to cancel the list you\'ve ordered.</string>
+    <string name="kieth6">Enter your Name, Address, Your Phone Number, and Payment Method. \n \n </string>
+    <string name="kieth7">Click Finish, and the Receipt will shown.</string>
+</resources>

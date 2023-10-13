@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>OrderItems.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6a8759;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+OrderItems.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.example.paimonstravern</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">androidx.appcompat.app.AppCompatActivity</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.os.Bundle</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.widget.LinearLayout</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.widget.TextView</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">java.util.ArrayList</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">OrderItems </span><span class="s0">extends </span><span class="s1">AppCompatActivity {</span>
+    <span class="s0">private </span><span class="s1">LinearLayout checklistLinearLayout</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">ArrayList&lt;String&gt; itemNames = </span><span class="s0">new </span><span class="s1">ArrayList&lt;&gt;()</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">ArrayList&lt;Double&gt; itemPrices = </span><span class="s0">new </span><span class="s1">ArrayList&lt;&gt;()</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">TextView showTotal</span><span class="s0">;</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) {</span>
+        <span class="s0">super</span><span class="s1">.onCreate(savedInstanceState)</span><span class="s0">;</span>
+        <span class="s1">setContentView(R.layout.activity_order_items)</span><span class="s0">;</span>
+
+        <span class="s1">checklistLinearLayout = findViewById(R.id.checklistLinearLayout)</span><span class="s0">;</span>
+        <span class="s1">showTotal = findViewById(R.id.showtotal)</span><span class="s0">;</span>
+
+        <span class="s2">// Retrieve the selected items and their prices from the intent extras</span>
+        <span class="s1">ArrayList&lt;String&gt; selectedItems = getIntent().getStringArrayListExtra(</span><span class="s3">&quot;selectedItems&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">double</span><span class="s1">[] selectedPrices = getIntent().getDoubleArrayExtra(</span><span class="s3">&quot;selectedPrices&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s0">if </span><span class="s1">(selectedItems != </span><span class="s0">null </span><span class="s1">&amp;&amp; selectedPrices != </span><span class="s0">null</span><span class="s1">) {</span>
+            <span class="s2">// Populate itemNames and itemPrices with the selected data</span>
+            <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i = </span><span class="s4">0</span><span class="s0">; </span><span class="s1">i &lt; selectedItems.size()</span><span class="s0">; </span><span class="s1">i++) {</span>
+                <span class="s1">itemNames.add(selectedItems.get(i))</span><span class="s0">;</span>
+                <span class="s1">itemPrices.add(selectedPrices[i])</span><span class="s0">;</span>
+                <span class="s1">addItemToLinearLayout(selectedItems.get(i)</span><span class="s0">, </span><span class="s1">selectedPrices[i])</span><span class="s0">;</span>
+            <span class="s1">}</span>
+
+            <span class="s2">// Update the total price</span>
+            <span class="s1">updateTotalPrice()</span><span class="s0">;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+
+    <span class="s0">private void </span><span class="s1">addItemToLinearLayout(String itemName</span><span class="s0">, double </span><span class="s1">itemPrice) {</span>
+        <span class="s2">// Create a TextView for the new item</span>
+        <span class="s1">TextView newItemTextView = </span><span class="s0">new </span><span class="s1">TextView(</span><span class="s0">this</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">newItemTextView.setLayoutParams(</span><span class="s0">new </span><span class="s1">LinearLayout.LayoutParams(</span>
+                <span class="s1">LinearLayout.LayoutParams.MATCH_PARENT</span><span class="s0">,</span>
+                <span class="s1">LinearLayout.LayoutParams.WRAP_CONTENT</span>
+        <span class="s1">))</span><span class="s0">;</span>
+        <span class="s1">newItemTextView.setText(itemName + </span><span class="s3">&quot; - $&quot; </span><span class="s1">+ itemPrice)</span><span class="s0">;</span>
+        <span class="s1">newItemTextView.setPadding(</span><span class="s4">16</span><span class="s0">, </span><span class="s4">8</span><span class="s0">, </span><span class="s4">16</span><span class="s0">, </span><span class="s4">8</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s2">// Add the TextView to the LinearLayout</span>
+        <span class="s1">checklistLinearLayout.addView(newItemTextView)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">private void </span><span class="s1">updateTotalPrice() {</span>
+        <span class="s0">double </span><span class="s1">total = </span><span class="s4">0.0</span><span class="s0">;</span>
+        <span class="s0">for </span><span class="s1">(Double price : itemPrices) {</span>
+            <span class="s1">total += price</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s1">showTotal.setText(</span><span class="s3">&quot;Total: $&quot; </span><span class="s1">+ total)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
